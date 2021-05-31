@@ -23,6 +23,14 @@
                 </a>
             </div>
 
+            <div th:if="${#strings.isEmpty(userName)}" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:;" class="btn_social" data-social="google">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+
             <div th:if="${not #strings.isEmpty(userName)}" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -35,12 +43,7 @@
 </div>
 
 <div class="container" style="text-align: center;">
-    <br/>
-    <h2>로그인</h2><br/><br/>
-<!--    <a href="javascript:;" class="btn_social" data-social="facebook"><img th:src="@{/images/facebook.png}" width="40px" height="40px"/></a>-->
-    <a href="javascript:;" class="btn_social" data-social="google"><img th:src="@{/images/google.png}" width="100px" height="100px"/></a>
-<!--    <a href="javascript:;" class="btn_social" data-social="kakao"><img th:src="@{/images/kakao.png}" width="40px" height="40px"/></a>-->
-</div>
+<</div>
 
 <div th:fragment="footer">
     <footer class="footer">
